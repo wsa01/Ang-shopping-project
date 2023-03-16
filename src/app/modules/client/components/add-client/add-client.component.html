@@ -1,1 +1,53 @@
-<p>add-client works!</p>
+<!-- Modal -->
+<div class="modal fade" id="modalAdd" #modalAdd data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class=" text-center" id="exampleModalLabel">Agregar Cliente</h3>
+        </div>
+        <div class="modal-body">
+          <form novalidate class="needs-validation" autocomplete="off" >
+           <div class="row">
+  
+            <div class="col-sm-6 mb-3">
+              <label for="recipient-name" class="col-form-label">Nombre:</label>
+              <input   id="nombre" formControlName="nombre" type="text" class="form-control">
+              <!-- <span class="form-text text-danger">Minimo 3 caracteres </span> -->
+            </div>
+            <div class="col-sm-6 col-12">
+              <label for="recipient-name" class="col-form-label">Apellido:</label>
+              <input  formControlName="apellido" type="text" class="form-control"  >
+              <!-- <span class="form-text text-danger">Minimo 3 caracteres </span> -->
+  
+            </div>
+            <div class="col-sm-3 col-12 ">
+              <label for="recipient-name" class="col-form-label">Edad:</label>
+              <input formControlName="edad" type="number" class="form-control" >
+              <!-- <span class="form-text text-danger">La edad minima es 18 </span> -->
+            </div>
+            <br>
+            <div class="col-sm-5">
+              <label for="recipient-name" class="col-form-label">Fecha Nac.:</label>
+              <!-- <input [ngClass]="validClass('fechNac')" formControlName="fechNac" type="date" class="form-control" > -->
+              <input  formControlName="fechNac" type="date" class="form-control" >
+              <!-- <span class="form-text text-danger">La fecha es requerida </span> -->
+            </div>
+            <div class="col-sm-4">
+              <label for="recipient-name" class="col-form-label">DNI:</label>
+              <!-- <input [ngClass]="validClass('dni')" formControlName="dni" type="text" class="form-control" > -->
+              <input  formControlName="dni" type="text" class="form-control" >
+              <!-- <span class="form-text text-danger">Ingrese un Dni valido </span> -->
+            </div>
+           </div>
+  
+  
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal" [routerLink]="['/client']" routerLinkActive="router-link-active" >Cerrar</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
